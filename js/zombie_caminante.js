@@ -17,7 +17,7 @@ ZombieCaminante.prototype.mover = function() {
   /* Los movimientos estan basados en un numero aleatorio
   La direccion horizontal es siempre la misma y va ondulando verticalmente.
   Esto hasta llegar a sus limites, donde se invierte su direccion horizontal */
-  if (Math.random() < 0.5) {
+  if (Math.random() < 0.6) {
     this.x -= this.velocidad;
     this.y -= this.velocidad;
   } else {
