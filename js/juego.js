@@ -171,7 +171,7 @@ Juego.dibujar = function () {
   utilizando al dibujante y los metodos que nos brinda.
   "Dibujante dibuja al jugador" */
   if(Jugador.vidas > 0 && Jugador.y + Jugador.alto <= 530){
-    Dibujante.dibujarEntidad(Jugador);
+    Dibujante.dibujarEntidad(this.jugador);
     /* Completar */
     // Se recorren los obstaculos de la carretera pintandolos
     this.obstaculosCarretera.forEach(function (obstaculo) {
@@ -217,11 +217,11 @@ Juego.calcularAtaques = function () {
     if (this.intersecan(enemigo, this.jugador, this.jugador.x, this.jugador.y)) {
       /* Si el enemigo colisiona debe empezar su ataque
       COMPLETAR */
-      enemigo.comenzarAtaque(Jugador);
+      enemigo.comenzarAtaque(this.jugador);
     } else {
       /* Sino, debe dejar de atacar
       COMPLETAR */
-      enemigo.dejarDeAtacar(Jugador);
+      enemigo.dejarDeAtacar(this.jugador);
     }
   }, this);
 };
